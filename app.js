@@ -35,9 +35,37 @@ const writeFile = () => {
 writeFile()
 
 
+const getPost = (id) => {
+    // TODO: Your code here
+ axios.get(`https://jsonplaceholder.typicode.com/posts/${id}/`)
+ .then((response) => {
+    console.log(response.data);
+  })
+  // in `.catch()` we add the code to handel the error
+ .catch((err) => {
+    throw err;
+  });
+
+};
+
+
+getPost(5)
 
 
 
+const getPostAsync = async (data) => {
+    // TODO: Your code here
+    try{
+    const response =  await axios.get(`https://jsonplaceholder.typicode.com/posts/${data}/`)
+    console.log(response.data);
+  } catch (err){
+    throw err;
+  };
+
+};
+
+
+getPostAsync(7)
 
 
 
