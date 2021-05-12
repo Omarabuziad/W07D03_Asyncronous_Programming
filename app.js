@@ -24,7 +24,7 @@ readFile()
 const writeFile = () => {
     // TODO: Your code here
     fs.writeFile("text.txt", "A new file has been created", (err) => {
-        if (err) throw err;
+        if (err){ throw err};
         console.log("The file has been saved");
     });
     
@@ -89,17 +89,29 @@ const appendToFile = (data) => {
   // TODO: Your code here
 
   fs.appendFile('data.txt', ("\n" + data) , (err) => {
-    if (err) throw err;
+    if (err) {throw err};
     console.log('The "data to append" was appended to file!');
   });
 
 
 };
 
+//2
+
+const copyFile = (fileName) => {
+  // TODO: Your code here
+  fs.copyFile("data.txt" , fileName , (err) => {
+    if (err) {throw err};
+    console.log('the file has been copied');
+  });
+
+}
+
+//3
 
 
 
-appendToFile("hi all")
+
 
 
 
