@@ -80,3 +80,27 @@ app.listen(port, () => {
 
 
 
+// practice 
+
+//1
+
+
+const appendToFile = (data) => {
+  // TODO: Your code here
+
+  fs.appendFile('data.txt', ("\n" + data) , (err) => {
+    if (err) throw err;
+    console.log('The "data to append" was appended to file!');
+  });
+
+
+};
+
+
+
+
+appendToFile("hi all")
+
+
+
+
